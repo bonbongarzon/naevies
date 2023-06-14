@@ -1,0 +1,303 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.8s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+header,
+nav {
+    width: 100%;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    position: relative;
+
+}
+
+nav>div {
+    max-width: 1400px;
+    padding: 20px 50px;
+}
+
+nav>div>div a {
+
+    font-weight: 600;
+}
+
+nav>div {
+    width: 100%;
+    /* max-width: 1200px;
+    min-width: 850px; */
+    padding: 20px 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-burger {
+    display: none;
+}
+
+nav div a {
+    text-decoration: none;
+    color: white;
+}
+
+nav>div>ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+nav>div>ul>li {
+    padding: 0px 20px;
+    /* border-bottom: solid 2px white; */
+    margin: 0px 10px;
+
+    position: relative;
+
+}
+
+nav>div>ul>li .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+nav>div>form {
+
+
+    border-bottom: solid 1px white;
+    display: flex;
+}
+
+nav>div>form>input {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 5px 10px;
+    /* min-width: 10px;
+    max-width: 100px; */
+
+}
+
+nav>div>form>button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+
+.hero-main img {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    top:0px;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.content>div {
+    text-align: center;
+    width: 60%;
+}
+
+
+.content>div>h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 119.5%;
+    /* or 57px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.18);
+    margin-bottom: 30px;
+}
+
+.content > div > a {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+
+}
+
+
+
+
+@media only screen and (max-width: 40em) {
+ 
+
+    *{
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    header {
+        display: none;
+        z-index: 333;
+        position: relative;
+    }
+
+    header nav>div,
+    nav>div>ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    header nav {
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav>div .logo {
+        order: 3;
+    }
+
+    header nav>div>ul {
+        order: 1;
+    }
+
+    header nav>div>ul li {
+        padding: 20px;
+    }
+
+    header nav>div>ul li:hover {
+        background-color: rgb(42, 42, 42);
+    }
+
+    header nav>div,
+    nav>form {
+        padding: 20px;
+    }
+
+    header>nav>div {
+        background-color: black;
+        padding: 20px;
+        width: 100%;
+        height: 800px;
+        justify-content: flex-start
+    }
+
+    nav>div>ul>li .active::after {
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+        padding: 10px;
+        width: 30px;
+        border: none;
+        z-index: 999;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .menu-burger div {
+        height: 3px;
+        background-color: white;
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    nav>div>form {
+        width: 40%;
+    }
+
+    .logo-mob {
+        z-index: 999;
+        top: 20px;
+        left: 20px;
+        position: absolute;
+    }
+
+    .logo-mob a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .content{
+        z-index: 111;
+    }
+    .hero-main{
+        height: 800px;
+    }
+
+    .content>div > h1{
+        font-size: 38px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* nav > div {
+    background-color: red;
+}
+
+
+
+nav>div ul,
+nav>div ul>div>ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+}
+
+
+
+
+.home img{
+    width: 100%;
+} */
